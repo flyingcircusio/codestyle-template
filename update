@@ -8,8 +8,8 @@ fi
 # http://mywiki.wooledge.org/BashFAQ/028
 bundledir=${BASH_SOURCE%/*}/
 
-cp .pre-commit-config.yaml .
-cp pyproject.toml .
+cp "${bundledir}/.pre-commit-config.yaml" .
+cp "${bundledir}/pyproject.toml" .
 
-pre-commit init
+pre-commit install
 pre-commit run -a

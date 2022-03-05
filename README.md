@@ -10,7 +10,9 @@ This repository maintains our generally recommended code style / pre-commit vali
 
 * Run `codestyle-template/update` to apply the settings to your project, record the resulting changes as a single commit.
 
-* enable black and isort on your editor
+* Enable black and isort on your editor
+
+* Enable Github action or Gitlab pipeline to verify changes automatically.
 
 Example:
 
