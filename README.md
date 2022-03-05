@@ -12,7 +12,11 @@ This repository maintains our generally recommended code style / pre-commit vali
 
 * Enable black and isort on your editor
 
-* Enable Github action or Gitlab pipeline to verify changes automatically.
+* CI/CD
+
+  * A Github action is installed automatically. 
+
+  * Gitlab pipelines need to be added manually.
 
 Example:
 
