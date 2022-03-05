@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if [ -n "$(git status --porcelain)" ]; then
+	echo "Unclean working directory, refusing to apply codestyle update."
+	exit 1
+fi
+
+# http://mywiki.wooledge.org/BashFAQ/028
+bundledir=${BASH_SOURCE%/*}/
+
+cp .pre-commit-config.yaml .
+cp pyproject.toml .
+
+pre-commit init
+pre-commit run -a
