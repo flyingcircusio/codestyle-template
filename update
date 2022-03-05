@@ -6,10 +6,14 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 # http://mywiki.wooledge.org/BashFAQ/028
-bundledir=${BASH_SOURCE%/*}/
+bundledir=${BASH_SOURCE%/*}
 
-cp "${bundledir}/.pre-commit-config.yaml" .
+mkdir -p "${bundledir}/.github"
+cp -r ${bundledir}/github/* .github
+
+cp "${bundledir}/pre-commit-config.yaml" .pre-commit-config.yaml
 cp "${bundledir}/pyproject.toml" .
+
 
 pre-commit install
 pre-commit run -a
