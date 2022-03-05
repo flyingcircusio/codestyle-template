@@ -16,9 +16,11 @@ This repository maintains our generally recommended code style / pre-commit vali
 
 Example:
 
-  $ git clone myproject
-  $ cd myproject
-  $ ../codestyle-template/update
-  $ git status
-  # review output
-  $ git commit -m "Update coding style."
+```console 
+$ git clone myproject
+$ cd myproject
+$ ../codestyle-template/update
+$ git status
+# review output
+$ git commit -m "Update coding style."
+```
