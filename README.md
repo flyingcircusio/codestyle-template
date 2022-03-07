@@ -14,6 +14,8 @@ This repository maintains our generally recommended code style / pre-commit vali
 
 * Enable black and isort on your editor
 
+* Run manually using `pre-commit run` if you want to check your changes before committing.
+
 * CI/CD
 
   * A Github action is installed automatically. 
