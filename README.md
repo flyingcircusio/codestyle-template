@@ -10,6 +10,8 @@ This repository maintains our generally recommended code style / pre-commit vali
 
 * Run `codestyle-template/update` to apply the settings to your project, record the resulting changes as a single commit.
 
+  * This may result in undesired changes, check for exclude rules that may be needed for your specific project.
+
 * Enable black and isort on your editor
 
 * CI/CD
