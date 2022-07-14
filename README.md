@@ -17,7 +17,7 @@ This repository maintains our generally recommended code style / pre-commit vali
     exclude: ^myfile.txt$
     ```
 
-    Note: the global exclude will be merged via rexep `|`. Other elements will be merged using dict and list merge. This file needs to be commited first.
+    Note: the global exclude will be merged via rexep `|`. Other elements will be merged using dict and list merge. This file needs to be committed first.
 
 * Enable black and isort on your editor
 
