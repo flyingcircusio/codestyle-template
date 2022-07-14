@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euxo pipefail
+
 if [ -n "$(git status --porcelain)" ]; then
 	echo "Unclean working directory, refusing to apply codestyle update."
 	exit 1
@@ -7,11 +9,18 @@ fi
 
 # http://mywiki.wooledge.org/BashFAQ/028
 bundledir=${BASH_SOURCE%/*}
+venv=${bundledir}/.venv
 
-mkdir -p "${bundledir}/.github"
+python3 -m venv $venv
+$venv/bin/pip install -r $bundledir/requirements.txt
+
+mkdir -p .github
 cp -r ${bundledir}/github/* .github
 
-cp "${bundledir}/pre-commit-config.yaml" .pre-commit-config.yaml
+$venv/bin/python $bundledir/merge-pre-commit-config.py \
+	"${bundledir}/pre-commit-config.yaml" \
+	.pre-commit-config.yaml
+
 cp "${bundledir}/pyproject.toml" .
 
 

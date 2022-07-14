@@ -1,5 +1,8 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
+
+exclude: ^secrets/|^appenv$
+
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
@@ -13,7 +16,7 @@ repos:
     -   id: end-of-file-fixer
         exclude: |
           (?x)^(
-            secrets/|environments/.*/secrets\.cfg|
+            environments/.*/secrets\.cfg|
             .*\.patch
           )$
     -   id: check-yaml
