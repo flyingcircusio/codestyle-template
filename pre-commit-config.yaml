@@ -10,13 +10,13 @@ repos:
     -   id: trailing-whitespace
         exclude: |
           (?x)^(
-            secrets/|environments/.*/secrets\.cfg|
+            secrets/|environments/.*/secret.*|
             .*\.patch
           )$
     -   id: end-of-file-fixer
         exclude: |
           (?x)^(
-            environments/.*/secrets\.cfg|
+            environments/.*/secret.*|
             .*\.patch
           )$
     -   id: check-yaml
