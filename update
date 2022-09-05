@@ -2,7 +2,7 @@
 
 set -euxo pipefail
 
-if [ -n "$(git status --porcelain)" ]; then
+if [ -n "$(git status --porcelain | grep -v .pre-commit-config-local.yaml)" ]; then
 	echo "Unclean working directory, refusing to apply codestyle update."
 	exit 1
 fi
