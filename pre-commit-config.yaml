@@ -37,3 +37,10 @@ repos:
     rev: 23.3.0
     hooks:
     -   id: black
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.0.289
+  hooks:
+    - id: ruff
+      # ignore "line too long" [E501] and "imported but unused" [F401] (required for some batou functionality)
+      args: [ "--ignore", "E501", "--ignore", "F401" ]
