@@ -7,6 +7,8 @@ repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
+    -   id: detect-private-key
+    -   id: check-added-large-files
     -   id: trailing-whitespace
         exclude: |
           (?x)^(
@@ -20,11 +22,29 @@ repos:
             .*\.patch
           )$
     -   id: check-yaml
-    -   id: check-added-large-files
+        exclude: |
+          (?x)^(
+            environments/.*/secret.*|
+            .*\.patch
+          )$
     -   id: check-json
+        exclude: |
+          (?x)^(
+            environments/.*/secret.*|
+            .*\.patch
+          )$
     -   id: check-xml
+        exclude: |
+          (?x)^(
+            environments/.*/secret.*|
+            .*\.patch
+          )$
     -   id: check-toml
-    -   id: detect-private-key
+        exclude: |
+          (?x)^(
+            environments/.*/secret.*|
+            .*\.patch
+          )$
 
 -   repo: https://github.com/pycqa/isort
     rev: 5.12.0
