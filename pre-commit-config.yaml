@@ -5,7 +5,7 @@ exclude: ^secrets/|^appenv$
 
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
     -   id: detect-private-key
     -   id: check-added-large-files
@@ -47,19 +47,19 @@ repos:
           )$
 
 -   repo: https://github.com/pycqa/isort
-    rev: 5.12.0
+    rev: 5.13.2
     hooks:
       - id: isort
         name: isort (python)
         args: ["--profile", "black", "--filter-files"]
 
 -   repo: https://github.com/psf/black
-    rev: 23.3.0
+    rev: 24.10.0
     hooks:
     -   id: black
 
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.0.289
+  rev: v0.6.9
   hooks:
     - id: ruff
       # ignore "line too long" [E501] and "imported but unused" [F401] (required for some batou functionality)

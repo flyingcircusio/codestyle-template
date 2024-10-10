@@ -25,13 +25,13 @@ This repository maintains our generally recommended code style / pre-commit vali
 
 * CI/CD
 
-  * A Github action is installed automatically. 
+  * A Github action is installed automatically.
 
   * Gitlab pipelines need to be added manually.
 
 Example:
 
-```console 
+```console
 $ git clone myproject
 $ cd myproject
 $ ../codestyle-template/update
