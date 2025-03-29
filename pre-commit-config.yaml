@@ -63,4 +63,4 @@ repos:
   hooks:
     - id: ruff
       # ignore "line too long" [E501] and "imported but unused" [F401] (required for some batou functionality)
-      args: [ "--ignore", "E501", "--ignore", "F401" ]
+      args: [ "--ignore", "E501", "--ignore", "F401", "--fix"]
